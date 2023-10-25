@@ -1,0 +1,342 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  box-sizing: border-box;
+  color: #2e2e38;
+}
+
+strong {
+  font-weight: 900;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1500px;
+  position: relative;
+  z-index: 10;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.main-page {
+  position: relative;
+  background: url("../assets/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.main-page img.lower-image {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  max-width: 1500px;
+  width: 100%;
+  margin: auto;
+  right: 0;
+  max-height: 50vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+header .logo svg {
+  width: 153px;
+  height: auto;
+}
+
+.sign-out-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10vh;
+  text-align: center;
+}
+
+.welcome-message {
+  text-align: center;
+  font-size: 4vw;
+  margin-top: 14vh;
+}
+
+.sign-out-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  width: 100%;
+  transition-property: background-color;
+  transition-duration: 100ms;
+  color: white;
+  background-color: #ff2828;
+  border-color: #b30000;
+}
+
+.always-on-top {
+  position: relative;
+  z-index: inherit;
+}
+
+.box-shadow {
+  box-shadow: 2px 4px 8px 0px #818181;
+}
+
+.main-chat {
+  min-height: calc(100vh - 220px);
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+}
+
+.main-chat::-webkit-scrollbar {
+  width: 5px;
+}
+
+.main-chat::-webkit-scrollbar-thumb {
+  background-color: #010440;
+  outline: 1px solid #fff;
+  border-radius: 8px;
+}
+
+.chat-input::placeholder {
+  color: #62388a;
+  opacity: 1;
+}
+
+.submit-btn[disabled],
+.submit-btn.pointer-events-none {
+  background-color: #d9d9d9;
+}
+
+.submit-btn[disabled] path,
+.submit-btn.pointer-events-none path {
+  fill: #666;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Smaller width device */
+@media (max-width: 700px) {
+  .responsive-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+.data-table th {
+  font-size: 14px;
+  font-weight: normal;
+  background-color: #fff3e1;
+  padding: 18px 20px;
+}
+
+.data-table td {
+  font-size: 14px;
+  background-color: #fff;
+  padding: 17px 20px;
+  border-top: 1px solid #e7e7ee;
+}
+
+.data-table th:first-child,
+.data-table td:first-child {
+  padding-left: 48px;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+  padding-right: 48px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid #eaecf0;
+  margin-top: 30px;
+}
+
+.pagination li {
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.pagination li:first-child a {
+  border-radius: 8px 0 0 8px;
+}
+
+.pagination li:last-child a {
+  border-radius: 0 8px 8px 0;
+}
+
+.pagination li a {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d2939;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-left: 1px solid #d0d5dd;
+  border-right: 1px solid #d0d5dd;
+}
+
+.pagination li.selected a {
+  color: #1d2939;
+  background-color: #e7e7ee;
+}
+
+.pagination .previous a,
+.pagination .next a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: capitalize;
+  color: #1d2939;
+  padding: 10px 16px;
+}
+
+.pagination .previous.disabled a,
+.pagination .next.disabled a,
+.pagination .previous.disabled a,
+.pagination .next.disabled a {
+  border-color: #e7e7ee;
+  color: #747480;
+  cursor: not-allowed;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay-btn svg path {
+  stroke: #fff;
+}
+
+.main-page .audio-recorder {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: #6941c6;
+}
+
+.main-page .audio-recorder .audio-recorder-mic {
+  filter: brightness(0) invert(1);
+  height: 24px;
+}
+
+.main-page .audio-recorder.recording {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 32px;
+  background-color: #b42318;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.main-page .audio-recorder-timer,
+.main-page .audio-recorder-status {
+  color: #fff;
+}
+
+.main-page .audio-recorder-options {
+  filter: brightness(0) invert(1);
+}
+
+.upload-data input + span,
+.upload-data .drop-down span {
+  color: red;
+  font-size: 14px;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  border: 8px solid #62388a;
+  border-radius: 50%;
+  animation: lds-ring 2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #62388a transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.popup-content {
+  max-height: 75vh;
+  overflow-y: auto;
+}
+.main-chat,
+.main-chat + form {
+  box-shadow: 0 0 2px 0 rgba(98, 56, 138, 0.5);
+}
+.popup-content::-webkit-scrollbar {
+  width: 0px;
+}
