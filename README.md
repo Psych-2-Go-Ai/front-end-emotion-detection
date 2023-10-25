@@ -85,7 +85,7 @@ You can follow this [YouTube video](https://youtu.be/Irv5Ab4qGcE?si=nnUOMal79HoW
 
 Once everything is set up, open your domain in a web browser. You should see a page like this.
 
-![Success Page Domain](https://imgur.com/a/ZTS73dX)
+![Success Page Domain](https://github.com/Psych-2-Go-Ai/front-end-emotion-detection/assets/104954857/50aaf706-c117-43fb-833d-1f7e07ef47b6)
 
 If all good move on to [Frontend Deployment](#frontend-deployment).
 
@@ -108,7 +108,7 @@ If all good move on to [Frontend Deployment](#frontend-deployment).
 
 Once everything is set up, open your domain in a web browser. You should see a apache success page like this.
 
-![Success Page Ec2](https://imgur.com/a/hxsGVYJ)
+![Success Page Ec2](https://github.com/Psych-2-Go-Ai/front-end-emotion-detection/assets/104954857/64612982-0955-4afe-9948-9cc100d2d5c3)
 
 If all good move on to [Frontend Deployment](#frontend-deployment).
 
