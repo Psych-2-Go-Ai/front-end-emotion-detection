@@ -25,6 +25,7 @@ We uses machine learning to detect emotions and depression in audio files. With 
 - Supabase Account
 - Hugging Face Emotion Detection Model
 - OpenAI Chat API Key
+- Node and Npm
 - Name Domain (Optional)
 - Aws EC2 Instance (Optional)
 
@@ -143,11 +144,19 @@ git clone https://github.com/Psych-2-Go-Ai/front-end-emotion-detection.git
 
 ### Deploying the Application
 
+Create a Swap file
+```bash
+sudo fallocate -l 4G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+```
+
 Install the required packages
 
 ```bash
-npm install
-sudo npm install -g pm2
+sudo npm install
+sudo npm install -g pm2 react next
 ```
 
 Buil and start the application.
